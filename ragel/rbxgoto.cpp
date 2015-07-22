@@ -653,12 +653,20 @@ void RbxGotoCodeGen::RET( ostream &ret, bool inFinish )
 
 void RbxGotoCodeGen::BREAK( ostream &ret, int targState )
 {
+	//#todo: this function contains an unverified fix
+	//see the ragel 6.9 sources and fix it correctly
+	assert(false);
+	exit(1);
+
 	outLabelUsed = true;
 
-	out <<
+	ret <<
 		"	begin\n"
 		"		" << P() << " += 1\n"
-		"		" << rbxGoto(ret, "_out") << "\n" 
+		"		";
+	rbxGoto(ret, "_out");
+	ret <<
+		"\n"
 		"	end\n";
 }
 

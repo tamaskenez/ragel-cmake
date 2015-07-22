@@ -24,9 +24,10 @@
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
+#ifdef HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 #include <sstream>
-#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>

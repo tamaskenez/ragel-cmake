@@ -52,7 +52,7 @@ void finish( )
 		printf( "FAIL\n" );
 }
 
-char *inp[] = {
+char *input[] = {
 	"hello\n"
 };
 
@@ -63,7 +63,7 @@ int main( )
 	int i;
 	for ( i = 0; i < inplen; i++ ) {
 		init();
-		exec( inp[i], strlen(inp[i]) );
+		exec( input[i], strlen(input[i]) );
 		finish();
 	}
 	return 0;
